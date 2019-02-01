@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+      items: [
+    {
+      href: "../index",
+      text: "home"
+    }],
+    href: "",
+    text: "is it right"
+    }) }}  
+{% endblock %}
+
+{% block content %}
+<h1>  Find out if NHS login is right for your service</h1>
+ <div class="nhsuk-u-reading-width">
+    <p>NHS login lets your website or app check your users are who they say they are. This process is called 2-factor authentication. 
+The first step (authentication) asks a user to create and sign into an account by providing an email and password. The second step (identity assurance) asks them to prove their identity. 
+For some services, it’s enough to ask users to authenticate themselves without proving their identity. For example, if your service just needs to recognise that someone has used the service before.</p>
+
+    <h2>When you should use NHS login</h2>
+    <p>You should use NHS login if your service needs to check a user’s identity. 
+Your service might need to do this if it:</p>
+<ul>
+    <li>shows a user personal medical information about themselves, such as their health records or medical test results</li>
+    <li>replaces a form that needs to be physically signed by a user</li>
+    <li><mark>anything else?</mark></li>
+</ul>
+<h2>Example</h2>
+<p>The NHS App provides a simple and secure way for people to access a range of healthcare services on their smartphone or tablet. 
+Once registered, users can:</p>
+<ul>
+    <li>check their symptoms using the health A-Z on the NHS website</li>
+    <li>find out what to do when they need help urgently using NHS 111 online</li>
+    <li>book and manage appointments at their GP surgery</li>
+    <li>order their repeat prescriptions</li>
+    <li>securely view their GP medical record</li>
+    <li>register as an organ donor</li>
+    <li>choose whether the NHS uses their data for research and planning</li>
+</ul>
+<p>The NHS App uses NHS login to check the identities of users who request access to digital health records and services. This is because the App needs to be sure the right person sees their confidential medical information, and that no one else is trying to see this information in their name. 
+NHS login can check things like a user’s driving license or passport details. By using it in their service, the NHS App can be confident its users are who they say they are.</p>
+<h2>When NHS login might not be right for your service</h2>
+<p>You might not need to use NHS login if your website or app:</p>
+<ul>
+    <li>does not give access to any personal medical information about a user</li>
+    <li>needs a user to physically go somewhere (such as a GP surgery or Post Office) to prove their identity</li>
+</ul>
+<p>If your service does not need to check a user’s identity but needs to let them access the service again to see or update their information, you can let the user create an account instead.</p>
+<h2>The constraints of NHS login</h2>
+<p>At the moment NHS login only covers:</p>
+<ul>
+    <li>Websites and apps which have a proven health and social care benefit</li>
+    <li>Users who are above the age of 16 (is this right – it’s 13 for the NHS App isn’t it?)</li>
+    <li>Users who have an English NHS number</li>
+    <li>Users who have current UK ID (passport or driving license)</li>
+</ul>
+<h2>At the moment NHS login does NOT cover:</h2>
+<ul>
+    <li>customers who want to re-use their Patient Online (POL) verification</li>
+    <li>customers who want to use offline methods of verification, for example post office or health professional vouching of identity</li>
+</ul>
+
+    {{ backLink({
+        "href": "index",
+        "text": "Return to overview"
+    }) }}
+
+  </div>
+
+{% endblock %}

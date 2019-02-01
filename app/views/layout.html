@@ -45,7 +45,22 @@
 {% endblock %}
 
 {% block footer %}
+  
   {{ footer({
+    "links": [
+      {
+        "URL": "/connecting/connecting",
+        "label": "Get Started"
+      },
+      {
+        "URL": "/documentation/service-description",
+        "label": "Documentation"
+      },
+      {
+        "URL": "",
+        "label": "Support"
+      }
+    ]
   })}}
 {% endblock %}
 
