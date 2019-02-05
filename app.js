@@ -17,7 +17,7 @@ const documentationRoutes = require('./docs/documentation_routes');
 // Set configuration variables
 const port = process.env.PORT || config.port;
 const useDocumentation = process.env.SHOW_DOCS || config.useDocumentation;
-const onlyDocumentation = false; //process.env.DOCS_ONLY;
+const onlyDocumentation = process.env.DOCS_ONLY;
 
 // Initialise applications
 const app = express();
