@@ -58,6 +58,14 @@ app.use(bodyParser.urlencoded({
   extended: true
 }))
 
+// not sure if this will work
+if(onlyDocumentation == 'false') {
+  app.get('/docs', function(req, res) {
+    // Redirect to the documentation pages if it is
+    res.redirect('/');
+  });
+}
+
 // Check if the app is documentation only
 if(onlyDocumentation == 'true') {
   app.get('/', function(req, res) {
