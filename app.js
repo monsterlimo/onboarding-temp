@@ -59,7 +59,7 @@ app.use(bodyParser.urlencoded({
 }))
 
 // Check if the app is documentation only
-if(onlyDocumentation == 'true') {
+if(onlyDocumentation == 'false') {
   app.get('/', function(req, res) {
     // Redirect to the documentation pages if it is
     res.redirect('/docs');
@@ -75,7 +75,7 @@ app.get(/^([^.]+)$/, function (req, res, next) {
 })
 
 // Check if the app is using documentation
-if (useDocumentation || onlyDocumentation == 'true') {
+if (useDocumentation || onlyDocumentation == 'false') {
   // Documentation routes
   app.use('/docs', documentationApp);
 
