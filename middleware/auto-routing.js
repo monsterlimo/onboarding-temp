@@ -14,7 +14,7 @@
 **/
 
 function renderPath (path, res, next) {
-  console.log("path: " + path);
+  // console.log("path: " + path);
   res.render(path, function (error, html) { // [1] //
     if (!error) {
       res.set({ 'Content-type': 'text/html; charset=utf-8' }) // [2] //
