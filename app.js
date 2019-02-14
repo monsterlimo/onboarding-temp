@@ -24,7 +24,7 @@ const app = express();
 const documentationApp = express();
 
 // Check if the app is documentation only
-if(onlyDocumentation !== 'true') {
+if(onlyDocumentation !== 'false') {
   // Require authentication if not
   app.use(authentication);
 }
