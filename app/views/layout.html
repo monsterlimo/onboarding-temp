@@ -43,14 +43,37 @@
 {% block header %}
 
 {{ header({
-  "transactionalService": {
+    "transactionalService": {
       "name": "NHS login Self Service",
       "href": "index"
     },
-    "showNav": "false",
-    "showSearch": "false"
+    "showNav": "true",
+    "showSearch": "false",
+    "primaryLinks": [
+      {
+        "url"  : "https://www.nhs.uk/conditions",
+        "label" : "NHS login"
+      },
+      {
+        'url' : 'https://www.nhs.uk/live-well/',
+        'label' : 'Overview'
+      },
+      {
+        'url'  : 'https://www.nhs.uk/conditions/social-care-and-support/',
+        'label' : 'How it works'
+      },
+      {
+        'url'  : 'https://www.nhs.uk/news/',
+        'label' : 'Features'
+      },
+      {
+        'url' : 'https://www.nhs.uk/service-search',
+        'label' : 'Get Started'
+      }
+    ]
   })
 }}
+
 
 {% endblock %}
 
