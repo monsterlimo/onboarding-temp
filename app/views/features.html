@@ -6,6 +6,18 @@
   {{ serviceName }}
 {% endblock %}
 
+{% block beforeContent %}
+  {{ breadcrumb({
+      items: [
+    {
+      href: "../index",
+      text: "home"
+    }],
+    href: "",
+    text: "Features"
+    }) }}  
+{% endblock %}
+
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">

@@ -6,6 +6,18 @@
   {{ serviceName }}
 {% endblock %}
 
+{% block beforeContent %}
+  {{ breadcrumb({
+      items: [
+    {
+      href: "../index",
+      text: "home"
+    }],
+    href: "",
+    text: "How it works"
+    }) }}  
+{% endblock %}
+
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
@@ -76,7 +88,7 @@
       <p>The user can enter their ID and Password plus 2FA code, unless using their device has fingerprint identification in which case they can simply use that method.</p>
       <p>The system then ensures the user has the appropriate level of verification for the service and logs them in.</p>
       
-      <p><a href="">View the prototypes</a></p>
+      <p><a href="http://nhslogin-demo.herokuapp.com/">View the prototypes</a></p>
 
       <hr>
 
