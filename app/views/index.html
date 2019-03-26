@@ -29,7 +29,7 @@
     <div class="nhsuk-width-container">
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-full">
-          <div class="nhsuk-hero-content" style="max-width: 800px">
+          <div class="nhsuk-hero-content" style="max-width: 700px">
             <h1 class="nhsuk-u-margin-bottom-3">NHS login is a quick, free, and secure way of identifying and verifying who a user is.</h1>
             <p class="nhsuk-body-l nhsuk-u-margin-bottom-0"></p>
             <span class="nhsuk-hero__arrow" aria-hidden="true"></span>
@@ -40,37 +40,47 @@
   </div>
 </section>
 
-
-
-
 {% endblock %}
 
+
+
 {% block content %}
+
+
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-grid-column-two-thirds">
+      <p>It allows users to access digital health and social care services as seamlessly as possible, whilst providing a safe way to make sure you’re giving only the right people access to your service.</p>
+      <!--<p>Think ‘Login using Facebook’ but developed and maintained by NHS Digital.</p>-->
+      <mark>New summary video ▶️ (to be created)</mark><br /></br />
+      <p><a href="./overview" class="button nhsuk-button">Find out more about NHS login</a></p>
 
       <h2>Why use NHS login?</h2>
-      <p>If you’re building a health or social care app or website for patients, NHS login is a flexible solution which can take away the headache of creating an account for a user, verifying the users’ identity and linking it to an NHS number.</p>
-      <p>Benefits for your users</p>
+      <p>If you’re building a health or social care app or website for patients, NHS login is a free, flexible solution which can take away the headache of creating an account for a user, verifying the users’ identity and linking it to an NHS number.</p>
+      <mark>Paragraph about developer support and community (eventually link testimonials)</mark><br /><br />
+      <p>Benefits for your <strong>users</strong></p>
       <ul>
         <li>One-time simple Sign-up process</li>
         <li>Single login to access multiple Health and Social care services</li>
-        <li>Peace of mind their data is secure</li>
+        <li>Peace of mind that their data is secure</li>
       </ul>
-      <p>Benefits for your organisation</p>
+      <p>Benefits for your <strong>organisation</strong></p>
       <ul>
         <li>Being sure your users are who they say they are</li>
         <li>Not having to build and manage an identity platform</li>
-        <li>It’s free</li>
+        <li>A tailored level of user verification appropriate to your service</li>
       </ul>
-      <p><a href="./overview">Find out if NHS login is right for your service</a></p>
+      <p><a href="./overview" class="button nhsuk-button">Find out if NHS login is right for your service</a></p>
 
-      <hr />
+      <hr>
 
       <h2>How it works</h2>
-      <p>NHS login is an internet facing system for identifying and verifying a user’s identity using <a href="https://openid.net/developers/specs/">Open ID Connect</a> and the <a href="https://oauth.net/2/">Oauth2.0 protocols</a> alongside <a href="https://fidoalliance.org/specifications/">FIDO (Fast Identity Online) specifications</a> for improving the user’s experience of accessing services.</p>
-      <p><a href="how-it-works">Find out how NHS login works</a><br />
+      <p>NHS login is an internet facing system for identifying and verifying a user’s identity, which uses the <a href="https://openid.net/developers/specs/">Open ID Connect</a> and the <a href="https://oauth.net/2/">Oauth2.0 protocols</a>.</p>
+
+      <p>It also uses <a href="https://fidoalliance.org/specifications/">FIDO (Fast Identity Online) specifications</a> which improve the user experience by allowing Fingerprint ID and Face ID to seamlessly access native apps.</p>
+
+      <p><a href="how-it-works">Find out more about how NHS login works</a><br />
       <a href="http://nhslogin-demo.herokuapp.com/">View the prototypes</a></p>
+
       <hr>
 
       <h2>Safety and security</h2>
@@ -80,18 +90,29 @@
       <hr>
 
       <h2>Get started</h2>
-      <p><mark>Paragraph about partner ready to begin investigating/onboarding 
-      //Summary of what’s involved in Onboarding//
-      //Sandpit / stub access//</mark></p>
-      <p><a href="get-started/get-started">Onboarding</a><br>
-      <a href="">Technical / sandpit</a></p><mark>Where to link to</mark>
+      <p>NHS login is currently in a private beta.</p>
+      <p>Due to the number of partners waiting to use NHS login we are having to prioritise requests to join the public beta. Prioritisation will be based on a variety of factors such as strategic fit and benefits to health and social care.</p>
+      <mark>left</mark>
+      <p>There are various steps to onboarding the service which include you providing usage forecasts, passing assurance standards, and determining the appropriate level of verification for your service.</p>
+      <p><a href="get-started/get-started">View a step-by-step guide to onboarding to NHS login</a>
+
+      <mark>right</mark>
+      <p>We have a developers’ GitHub where you can find step-by-step information on setting up the connection to NHS login.</p>
+
+      <p>rom the GitHub, developers can request access to the Sandpit which is a copy of our production code environment which will help you learn how to integrate with our service.</p>
+
+      <p>We also have a Slack channel where our NHS login developers are on hand to answer technical questions and support partner organisations.</p>
+
+      <p><a href="">Visit the NHS login GitHub repository</a></p>
+      <p><a href="">View the External Interface Specification (EIS)</a></p>
+      <p><a href="">Join the NHS login Slack</a></p>
 
       <hr>
 
-      <h2>Mailing list / contact</h2>
-      <p>Join our mailing list to get involved with NHS login. If you can't find an answer then feel free to drop a message to our mailbox.</p>
-      <mark>add email or link to a form</mark>
+      <h2>Get in touch</h2>
+      <p>If you can't find an answer then feel free to <a href="">drop a message to our mailbox</a> or <a href="">join the NHS login Slack channel</a></p>
 
+      <p>The project team also produces a weekly newsletter so please <a href="">join our mailing list</a> for the latest NHS login updates.</p>
 <!--
       <br><iframe width="560" height="315" src="https://www.youtube.com/embed/wI-jF9zJw0c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       <hr>
