@@ -22,7 +22,28 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
+      <h2>How it works</h2>
+      <p>NHS login is an internet facing system for identifying and verifying a user’s identity.</p>
+      <mark>add links</mark>
+      <p>NHS login offers different levels of verification so you can choose the most appropriate for your service. To determine the right level of verification, review the guidance within the standards to understand the policy for the transactions within your service.</p>
+      <mark>add links</mark>
+
+      <h2>Example user journeys:</h2>
+      <mark>add links</mark>
+      <ul>
+        <li>Create an NHS login</li>
+        <li>Prove their identity</li>
+        <li>Log in using NHS login</li>
+        <li>Reset their password/manage their account</li>
+        <li>Close their account</li>
+        <li>Log out</li>
+      </ul>
+
+      <mark>look at expanding sections for the content below</mark>
+
       <h2>Here’s how a user creates an NHS login:</h2>
+      <mark>Video (https://youtu.be/wI-jF9zJw0c)</mark>
+      <mark>img - flow</mark>
       <ol>
         <li><strong>User signs up to a service</strong></li>
         <li><strong>Creates an NHS log in</strong><br />If the user does not already have an NHS login account they will be asked to:
@@ -38,8 +59,8 @@
 
         <br />To verify their identity, a user can either:
           <ul>
-            <li>Use NHS login services to prove their identity online (referred to as the Prove Your Identity (PYI) process); or</li>
-            <li>Use NHS login services and opt to re-use their existing GP Patient OnLine linkage key information (POL)5 to prove who they are.</li>
+            <li>Use NHS login services to prove their identity online (referred to as Prove Your Identity (PYI)); or</li>
+            <li>Use NHS login services and opt to re-use their existing GP Patient OnLine linkage key information (POL) to prove who they are.</li>
           </ul>
         </li>
       </ul>
@@ -54,22 +75,31 @@
         <br />Give the postcode of the GP surgery where they are registered plus either their name and date of birth or their NHS number.
         </li>
         <li><strong>Takes a picture of their photo ID document</strong>
-        <br />To prove their identity online (PYI) using NHS login, a user must:
-        <br />Upload a copy of a photo ID document. Admissible documents include:
           <ul>
-            <li>UK passports</li>
-            <li>UK provisional and full driving licences</li>
+            <li>Upload a copy of a photo ID document. Admissible documents include:
+              <ul>
+                <li>UK passports</li>
+                <li>UK provisional and full driving licences</li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li><strong>Takes a short video</strong>
         <br />Upload a short video of themselves reading 4 randomly generated numbers out loud
         </li>
+        <li><strong>ID verification</strong>
+        <br />Once this information is submitted by the user, our Home Office trained ID Checkers, will verify the user’s identity. This is done by:
+          <ul>
+            <li>checking the ID submitted is valid</li>
+            <li>checking the user is the same person on that ID using the video they submit of themselves</li>
+            <li>running a search to find a match on the NHS Personal Demographics Service (PDS)</li>
+            <li>attaching their NHS Number to their NHS login account.</li>
+          </ul>
+        </li>
       </ol>
+
+      <p>We aim to complete this process within <strong>2 hours</strong> of the user uploading their information.</p>
       
-      <p>Once this information is submitted by the user, our Home Office trained ID Checkers, will verify the user’s identity. This is done by checking the ID submitted is valid, checking the user is the same person on that ID using the video they submit of themselves, and running a search, using the information provided, to find a match on the NHS Personal Demographics Service (PDS) and attaching their NHS Number to their NHS login account.</p>
-
-      <p>We aim to complete this process within 2 hours of the user uploading their information.</p>
-
       <hr>
 
       <h2>B: The POL journey:</h2>
@@ -84,8 +114,8 @@
       <hr>
 
       <h2>Here’s how a user logs in using NHS login:</h2>
-      <p>Once their NHS login account has been created, the next time the user navigates to a partner service’s login page/service, they will again be offered the option of signing into the system using NHS login.</p>
-      <p>The user can enter their ID and Password plus 2FA code, unless using their device has fingerprint identification in which case they can simply use that method.</p>
+      <p>Once their NHS login account has been created, the next time the user navigates to a partner service’s login page, they will again be offered the option of signing into the system using NHS login.</p>
+      <p>The user can enter their ID and Password plus 2FA code. You can also implement fingerprint or Face ID if your service is an app.</p>
       <p>The system then ensures the user has the appropriate level of verification for the service and logs them in.</p>
       
       <p><a href="http://nhslogin-demo.herokuapp.com/">View the prototypes</a></p>
@@ -94,26 +124,18 @@
 
       <h2>Management of NHS login Accounts</h2>
       <p>We aim to make the NHS login Service account management capabilities self-service for the user wherever possible. The Service currently includes a feature that enables users to reset their NHS login password on a self-serve basis.</p>
-      <p>Additionally, we intend to deliver the capability for users to change their email address and/or their 2FA mobile number online by our Public Beta, March 2019.</p>
+      <p>Additionally, we intend to deliver the capability for users to change their email address and/or their 2FA mobile number online by our Public Beta.</p>
 
+      <hr>
 
+      <h2>Account closure</h2>
+      <p>NHS login has a process to automatically remove unused accounts. Currently, if your users wish to proactively remove their account, you can raise this to us via a support ticket.</p>
+      <p>In line with our self-service ethos, we intend to revisit the potential for introducing enhanced capability as we progress through our scheduled Public Beta.</p>
 
-<mark>Add other missing parts from:</mark>
-<ul>
-<li>Account closure</li>
-<li>Logging out</li>
-<li>NHS login co-existence with a RP-specific login</li>
-<li>Data retention</li>
-<li>Support for Delegated Access</li>
-<li>Support for user account creation account through "Vouching"</li>
-<li>Providing Relying Party services with the facility to generate GP system linkage keys</li>
-<li>Governance for RPs</li>
-</ul>
+      <hr>
 
-
-
-
-
+      <h2>Logging out</h2>
+      <p>Our intention is for NHS login to support global log-off for those partners using the Single Sign On capability that we are in the process of developing. This functionality is intended to be delivered after we enter Public Beta.</p>
 
     </div>
   </div>
