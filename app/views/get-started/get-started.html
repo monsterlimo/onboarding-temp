@@ -30,9 +30,7 @@
         "heading": "Partner prioritisation",
         "HTML": "<p>Due to the number of partners waiting to use NHS login we are having to prioritise requests to join the public beta. Prioritisation will be based on a variety of factors such as strategic fit and benefits to health and social care.</p>"
       }) }}
-    <!--<p>⚠️ Due to the number of partners waiting to use NHS login we are having to prioritise requests to join the public beta. Prioritisation will be based on a variety of factors such as strategic fit and benefits to health and social care.</p>-->
     <p>There are various steps to onboarding the service which include you providing usage forecasts, passing assurance standards, and determining the appropriate level of verification for your service.</p>
-    <!--<a href="onboarding-summary">View a step-by-step guide to onboarding to NHS login</a>-->
 
     {{ actionLink({
         "text": "View a step-by-step guide to onboarding to NHS login",
@@ -47,10 +45,39 @@
     <p>From the GitHub they can request access to the Sandpit which is a copy of our production code environment which will help you learn how to integrate with our service <mark> and mention stub?</mark></p>
 
     <p>We also have a Slack channel where our NHS login developers are on hand to answer technical questions and support partner organisations.</p>
-    <mark>Add links to github / EIS / NHS login slack</mark>
-    <mark>add the panel/promo styling for these</mark>
-    <mark>add styling to highlight</mark>
-    <p>Note: development in the Sandpit environment is a mandatory step to progressing through the onboarding process.</p>
+
+
+<div class="nhsuk-grid-row nhsuk-promo-group">
+  <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+    {{ promo({
+      "href": "",
+      "imgURL": "https://www.nhs.uk/static/nhsuk_shared/img/homepage/give-blood.png",
+      "heading": "Github",
+      "description": "NHS login github"
+    }) }}
+  </div>
+  <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+    {{ promo({
+      "href": "https://www.nhs.uk",
+      "imgURL": "https://www.nhs.uk/static/nhsuk_shared/img/homepage/give-blood.png",
+      "heading": "External Interface Specification",
+      "description": "NHS login technical specification"
+    }) }}
+  </div>
+  <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+    {{ promo({
+      "href": "https://www.nhs.uk",
+      "imgURL": "https://www.nhs.uk/static/nhsuk_shared/img/homepage/give-blood.png",
+      "heading": "Slack Support Channel ",
+      "description": "Get help from NHS login devs"
+    }) }}
+  </div>
+</div>
+
+    {{ insetText({
+      "HTML": "<p>Note: development in the Sandpit environment is a mandatory step to progressing through the onboarding process.</p>"
+    }) }}
+
     </div>
   </div>
 {% block pageScripts %}
