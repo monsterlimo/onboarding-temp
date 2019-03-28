@@ -8,22 +8,6 @@
 
 {% block header %}
 {{ super() }}
-<!--
-<section class="nhsuk-hero">
-  <div class="nhsuk-width-container nhsuk-hero--border">
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-full">
-        <div class="nhsuk-hero__wrapper">
-          <h1 class="nhsuk-u-margin-bottom-3">NHS login is a quick, free, and secure way of identifying and verifying who a user is.</h1>
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">It allows them to access digital health and social care services as seamlessly as possible, whilst providing a safe way to make sure you’re giving only the right people access to your service.</br></br>Think ‘Login using Facebook’ but developed and maintained by NHS Digital.</p>
-          <br>
-          <a href="overview" class="nhsuk-button nhsuk-button--reverse" id="get-started">Find out more about NHS login</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
--->
 <section class="nhsuk-hero nhsuk-hero--image nhsuk-hero--image-description" style="background-image: url('/images/Fibre-494278832-MED.jpg');">
   <div class="nhsuk-hero__overlay">
     <div class="nhsuk-width-container">
@@ -39,10 +23,7 @@
     </div>
   </div>
 </section>
-
 {% endblock %}
-
-
 
 {% block content %}
 
@@ -52,11 +33,18 @@
       <p>It allows users to access digital health and social care services as seamlessly as possible, whilst providing a safe way to make sure you’re giving only the right people access to your service.</p>
       <!--<p>Think ‘Login using Facebook’ but developed and maintained by NHS Digital.</p>-->
       <mark>New summary video ▶️ (to be created)</mark><br /></br />
-      <p><a href="./overview" class="button nhsuk-button">Find out more about NHS login</a></p>
+
+      {{ actionLink({
+        "text": "Find out more about NHS login",
+        "href": "overview"
+      }) }}
+
+      <hr>
 
       <h2>Why use NHS login?</h2>
       <p>If you’re building a health or social care app or website for patients, NHS login is a free, flexible solution which can take away the headache of creating an account for a user, verifying the users’ identity and linking it to an NHS number.</p>
       <mark>Paragraph about developer support and community (eventually link testimonials)</mark><br /><br />
+      <!--
       <p>Benefits for your <strong>users</strong></p>
       <ul>
         <li>One-time simple Sign-up process</li>
@@ -69,7 +57,22 @@
         <li>Not having to build and manage an identity platform</li>
         <li>A tailored level of user verification appropriate to your service</li>
       </ul>
-      <p><a href="./overview" class="button nhsuk-button">Find out if NHS login is right for your service</a></p>
+      -->
+
+      {{ panel({
+        "label": "Benefits for your <strong>users</strong>",
+        "HTML": "<ul><li>One-time simple Sign-up process</li><li>Single login to access multiple Health and Social care services</li><li>Peace of mind that their data is secure</li></ul>"
+      }) }}
+
+      {{ panel({
+        "label": "Benefits for your <strong>organisation</strong>",
+        "HTML": "<ul><li>Being sure your users are who they say they are</li><li>Not having to build and manage an identity platform</li><li>A tailored level of user verification appropriate to your service</li></ul>"
+      }) }}
+
+      {{ actionLink({
+        "text": "Find out if NHS login is right for your service",
+        "href": "overview"
+      }) }}
 
       <hr>
 
@@ -78,8 +81,15 @@
 
       <p>It also uses <a href="https://fidoalliance.org/specifications/">FIDO (Fast Identity Online) specifications</a> which improve the user experience by allowing Fingerprint ID and Face ID to seamlessly access native apps.</p>
 
-      <p><a href="how-it-works">Find out more about how NHS login works</a><br />
-      <a href="http://nhslogin-demo.herokuapp.com/">View the prototypes</a></p>
+      {{ actionLink({
+        "text": "Find out more about how NHS login works",
+        "href": "how-it-works"
+      }) }}
+
+      {{ actionLink({
+        "text": "View the prototypes",
+        "href": "http://nhslogin-demo.herokuapp.com/"
+      }) }}
 
       <hr>
 
@@ -94,7 +104,12 @@
       <p>Due to the number of partners waiting to use NHS login we are having to prioritise requests to join the public beta. Prioritisation will be based on a variety of factors such as strategic fit and benefits to health and social care.</p>
       <mark>left</mark>
       <p>There are various steps to onboarding the service which include you providing usage forecasts, passing assurance standards, and determining the appropriate level of verification for your service.</p>
-      <p><a href="get-started/get-started">View a step-by-step guide to onboarding to NHS login</a></p>
+      
+      {{ actionLink({
+        "text": "View a step-by-step guide to onboarding to NHS login",
+        "href": "get-started/get-started"
+      }) }}
+      
       <br /><br />
       <mark>right</mark>
       <p>We have a developers’ GitHub where you can find step-by-step information on setting up the connection to NHS login.</p>
@@ -102,7 +117,7 @@
       <p>rom the GitHub, developers can request access to the Sandpit which is a copy of our production code environment which will help you learn how to integrate with our service.</p>
 
       <p>We also have a Slack channel where our NHS login developers are on hand to answer technical questions and support partner organisations.</p>
-
+<mark>promo</mark>
       <p><a href="">Visit the NHS login GitHub repository</a></p>
       <p><a href="">View the External Interface Specification (EIS)</a></p>
       <p><a href="">Join the NHS login Slack</a></p>

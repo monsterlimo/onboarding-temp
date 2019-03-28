@@ -26,11 +26,19 @@
     <p>NHS login is due for public beta in March 2019.</p>
 
     <h2>Onboarding to NHS login</h2>
-    <mark>add warning style</mark>
-    <p>⚠️ Due to the number of partners waiting to use NHS login we are having to prioritise requests to join the public beta. Prioritisation will be based on a variety of factors such as strategic fit and benefits to health and social care.</p>
+    {{ warningCallout({
+        "heading": "Partner prioritisation",
+        "HTML": "<p>Due to the number of partners waiting to use NHS login we are having to prioritise requests to join the public beta. Prioritisation will be based on a variety of factors such as strategic fit and benefits to health and social care.</p>"
+      }) }}
+    <!--<p>⚠️ Due to the number of partners waiting to use NHS login we are having to prioritise requests to join the public beta. Prioritisation will be based on a variety of factors such as strategic fit and benefits to health and social care.</p>-->
     <p>There are various steps to onboarding the service which include you providing usage forecasts, passing assurance standards, and determining the appropriate level of verification for your service.</p>
-    <a href="onboarding-summary">View a step-by-step guide to onboarding to NHS login</a>
-   
+    <!--<a href="onboarding-summary">View a step-by-step guide to onboarding to NHS login</a>-->
+
+    {{ actionLink({
+        "text": "View a step-by-step guide to onboarding to NHS login",
+        "href": "onboarding-summary"
+      }) }}
+
     <hr>
 
     <h2>Exploring technical integration</h2>

@@ -50,8 +50,11 @@
       <hr>
 
       <h2>Just so you know…</h2>
-      <mark>add warning style</mark>
-      <p>❗There are limitations to the service as we continue to develop it. We are defining our roadmap based on research and data insights, but for now:</p>
+      <!--<p>❗There are limitations to the service as we continue to develop it. We are defining our roadmap based on research and data insights, but for now:</p>-->
+      {{ warningCallout({
+        "heading": "Limitations to the service",
+        "HTML": "<p>There are limitations to the service as we continue to develop it. We are defining our roadmap based on research and data insights, but for now:</p>"
+      }) }}
       <ul>
         <li>NHS login is currently only available for services in England</li>
         <li>Users need a form of Government ID</li> 
@@ -61,7 +64,13 @@
         <li>Clinical authorisation remains the responsibility of the partner service</li>
       </ul>
 
-      <p><a href="features">View the currently available features and roadmap</a>
+      <!--<p><a href="features">View the currently available features and roadmap</a>-->
+
+      {{ actionLink({
+        "text": "View the currently available features and roadmap",
+        "href": "features"
+      }) }}
+
     </div>
   </div>
 {% block pageScripts %}
