@@ -20,29 +20,20 @@
 
 {% block content %}
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-grid-column-two-thirds">
 
       <h2>How it works
       <span><a href="how-it-works">v0</a></span>
       <span>v1</span>
       </h2>
       <p>NHS login is an internet facing system for identifying and verifying a user’s identity.</p>
-      <mark>add links</mark>
+      <p>It uses the <a target="blank" href="https://openid.net/developers/specs/">Open ID Connect</a> and the <a target="blank" href="https://oauth.net/2/">Oauth2.0 protocols</a>. It also uses <a target="blank" href="https://fidoalliance.org/specifications/">FIDO (Fast Identity Online) specifications</a>  which improves the user’s experience by allowing Fingerprint ID and Face ID seamlessly access native apps.</p>
       <p>NHS login offers different levels of verification so you can choose the most appropriate for your service. To determine the right level of verification, review the guidance within the standards to understand the policy for the transactions within your service.</p>
-      <mark>add links</mark>
 
-      <h2>Example user journeys:</h2>
-      <mark>add links</mark>
-      <ul>
-        <li>Create an NHS login</li>
-        <li>Prove their identity</li>
-        <li>Log in using NHS login</li>
-        <li>Reset their password/manage their account</li>
-        <li>Close their account</li>
-        <li>Log out</li>
-      </ul>
+      <p><a href="how-it-works/create">View example user journeys</a></p>
 
-      <mark>look at expanding sections for the content below</mark>
+
+    <!--
 
       <h2>Here’s how a user creates an NHS login:</h2>
       <mark>Video (https://youtu.be/wI-jF9zJw0c)</mark>
@@ -121,7 +112,6 @@
       <p>The user can enter their ID and Password plus 2FA code. You can also implement fingerprint or Face ID if your service is an app.</p>
       <p>The system then ensures the user has the appropriate level of verification for the service and logs them in.</p>
       
-      <!--<p><a href="http://nhslogin-demo.herokuapp.com/">View the prototypes</a></p>-->
 
       {{ actionLink({
         "text": "View the prototypes",
@@ -145,7 +135,7 @@
 
       <h2>Logging out</h2>
       <p>Our intention is for NHS login to support global log-off for those partners using the Single Sign On capability that we are in the process of developing. This functionality is intended to be delivered after we enter Public Beta.</p>
-
+-->
     </div>
   </div>
 {% block pageScripts %}
