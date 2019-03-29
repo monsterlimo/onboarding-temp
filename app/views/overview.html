@@ -23,13 +23,13 @@
     <div class="nhsuk-grid-column-full">
 
       <h2>What is NHS login?</h2>
-      <p>NHS login is a quick and secure way for users to prove their identity online, allowing them to access digital health and social care services as seamlessly as possible. This will help reduce the burden on frontline services and reduce costs for the NHS.</p>
+      <h4>NHS login is a quick and secure way for users to prove their identity online, allowing them to access digital health and social care services as seamlessly as possible. This will help reduce the burden on frontline services and reduce costs for the NHS.</h4>
       <p>NHS login is a <strong>free service</strong>. It makes sure you’re giving the right people access without the effort and cost of developing and managing your own identity platform. </p>
       <p>NHS login offers different levels of verification so you can choose the most appropriate for your service. User records can be created with no verification for generic NHS services and information, whereas full verification allows access to sensitive information such as medical records.</p>
       <p>NHS login can co-exist with your own login system. It also has the facility to generate GP system linkage keys, subject to commercial agreement.</p>
       <p>The service was released into Private Beta in September 2018. NHS App is the login service’s first partner.</p>
 
-      <p>Find out <a href="how-it-works">How it works</a> or <a href="http://nhslogin-demo.herokuapp.com/">View the prototypes</a></p>
+      <p>Find out <a href="how-it-works">How it works</a> or <a target="blank" href="http://nhslogin-demo.herokuapp.com/">View the prototypes</a></p>
 
       <hr />
 
@@ -50,21 +50,19 @@
       <hr>
 
       <h2>Just so you know…</h2>
-      <!--<p>❗There are limitations to the service as we continue to develop it. We are defining our roadmap based on research and data insights, but for now:</p>-->
       {{ warningCallout({
         "heading": "Limitations to the service",
-        "HTML": "<p>There are limitations to the service as we continue to develop it. We are defining our roadmap based on research and data insights, but for now:</p>"
-      }) }}
-      <ul>
+        "HTML": "<p>There are limitations to the service as we continue to develop it. We are defining our roadmap based on research and data insights, but for now:</p>
+        <ul>
         <li>NHS login is currently only available for services in England</li>
         <li>Users need a form of Government ID</li> 
-        <li>Users need a smartphone or a desktop device with a webcam</li>
+        <li>Users need a smartphone</li>
         <li>Delegated access (ie parent / child or vulnerable individual etc) isn’t currently supported but it is on our roadmap</li>
         <li>Your service and organisation will need to meet our assurance requirements and sign our contract</li>
         <li>Clinical authorisation remains the responsibility of the partner service</li>
-      </ul>
-
-      <!--<p><a href="features">View the currently available features and roadmap</a>-->
+      </ul>"
+      }) }}
+      
 
       {{ actionLink({
         "text": "View the currently available features and roadmap",

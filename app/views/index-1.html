@@ -25,15 +25,46 @@
 </section>
 {% endblock %}
 
+{% block beforeContent %}
+<div class="nhsuk-homepage">
+<main id="maincontent">
+<section class="nhsuk-section">
+  <div class="nhsuk-o-width-container">
+    <div class="nhsuk-o-grid">        
+      <div class="nhsuk-o-grid__item nhsuk-o-grid__item--one-half nhsuk-section__content">
+      <p>There are various steps to onboarding the service which include you providing usage forecasts, passing assurance standards, and determining the appropriate level of verification for your service.</p>
+      
+      {{ actionLink({
+        "text": "View a step-by-step guide to onboarding to NHS login",
+        "href": "get-started/get-started"
+      }) }}
+
+      </div>
+      <div class="nhsuk-o-grid__item nhsuk-o-grid__item--one-half nhsuk-section__content">
+      <p>We have a developers’ GitHub where you can find step-by-step information on setting up the connection to NHS login.</p>
+
+      <p>rom the GitHub, developers can request access to the Sandpit which is a copy of our production code environment which will help you learn how to integrate with our service.</p>
+
+      <p>We also have a Slack channel where our NHS login developers are on hand to answer technical questions and support partner organisations.</p>
+<mark>promo</mark>
+      <p><a target="blank" href="">Visit the NHS login GitHub repository</a></p>
+      <p><a target="blank" href="">View the External Interface Specification (EIS)</a></p>
+      <p><a target="blank" href="">Join the NHS login Slack</a></p>
+      </div>  
+    </div>
+  </div>
+</section>
+</main>
+</div>
+{% endblock %}
+
 {% block content %}
 
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       <p>It allows users to access digital health and social care services as seamlessly as possible, whilst providing a safe way to make sure you’re giving only the right people access to your service.</p>
-      
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/aY9qGebzKww" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      <br /></br />
+      <mark>New summary video ▶️ (to be created)</mark><br /></br />
 
       {{ actionLink({
         "text": "Find out more about NHS login",
@@ -44,6 +75,8 @@
 
       <h2>Why use NHS login?</h2>
       <p>If you’re building a health or social care app or website for patients, NHS login is a free, flexible solution which can take away the headache of creating an account for a user, verifying the users’ identity and linking it to an NHS number.</p>
+      <mark>Paragraph about developer support and community (eventually link testimonials)</mark><br /><br />
+
 
       {{ panel({
         "label": "Benefits for your <strong>users</strong>",
@@ -89,38 +122,27 @@
       <h2>Get started</h2>
       <p>NHS login is currently in a private beta.</p>
       <p>Due to the number of partners waiting to use NHS login we are having to prioritise requests to join the public beta. Prioritisation will be based on a variety of factors such as strategic fit and benefits to health and social care.</p>
-      <mark>left</mark>
-      <h3>Onboarding to NHS login</h3>
+     <!-- <mark>left</mark>
       <p>There are various steps to onboarding the service which include you providing usage forecasts, passing assurance standards, and determining the appropriate level of verification for your service.</p>
       
       {{ actionLink({
         "text": "View a step-by-step guide to onboarding to NHS login",
-        "href": "get-started/onboarding-summary"
+        "href": "get-started/get-started"
       }) }}
       
       <br /><br />
-      <mark>right</mark>
-      <h3>Exploring technical integration</h3>
-
+      <mark>right</mark>-->
+      <!--
       <p>We have a developers’ GitHub where you can find step-by-step information on setting up the connection to NHS login.</p>
 
       <p>rom the GitHub, developers can request access to the Sandpit which is a copy of our production code environment which will help you learn how to integrate with our service.</p>
 
       <p>We also have a Slack channel where our NHS login developers are on hand to answer technical questions and support partner organisations.</p>
 <mark>promo</mark>
-      <p><a target="blank" href="">Visit the NHS login GitHub repository</a></p>
-      <p><a target="blank" href="">View the External Interface Specification (EIS)</a></p>
-      <p><a target="blank" href="">Join the NHS login Slack</a></p>
+      <p><a href="">Visit the NHS login GitHub repository</a></p>
+      <p><a href="">View the External Interface Specification (EIS)</a></p>
+      <p><a href="">Join the NHS login Slack</a></p>
 
-<!--
-<div class="nhsuk-o-width-container">
-  <div class="nhsuk-o-grid">        
-    <div class="nhsuk-o-grid__item nhsuk-o-grid__item--one-half nhsuk-section__content">
-    </div>
-    <div class="nhsuk-o-grid__item nhsuk-o-grid__item--one-half nhsuk-section__content">
-    </div>  
-  </div>
-</div>
 -->
 
 

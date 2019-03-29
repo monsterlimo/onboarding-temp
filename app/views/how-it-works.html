@@ -22,11 +22,13 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
-      <h2>How it works</h2>
+      <h2>How it works
+      <span>v0</span>
+      <span><a href="how-it-works-1">v1</a></span>
+      </h2>
       <p>NHS login is an internet facing system for identifying and verifying a user’s identity.</p>
-     <!-- <mark>add links</mark> -->
+      <p>It uses the <a target="blank" href="https://openid.net/developers/specs/">Open ID Connect</a> and the <a target="blank" href="https://oauth.net/2/">Oauth2.0 protocols</a>. It also uses <a target="blank" href="https://fidoalliance.org/specifications/">FIDO (Fast Identity Online) specifications</a>  which improves the user’s experience by allowing Fingerprint ID and Face ID seamlessly access native apps.</p>
       <p>NHS login offers different levels of verification so you can choose the most appropriate for your service. To determine the right level of verification, review the guidance within the standards to understand the policy for the transactions within your service.</p>
-      <!--<mark>add links</mark>-->
 
       <h2>Example user journeys:</h2>
     <!--  <mark>add links</mark>
@@ -73,7 +75,7 @@
 
       {{ details({
         "classes": "nhsuk-expander",
-        "text": "A: The PYI journey:",
+        "text": "Proving their identity",
         "HTML": "
        <ol start='3'>
         <li><strong>Enter demographic details</strong>
@@ -109,7 +111,7 @@
 
       {{ details({
         "classes": "nhsuk-expander",
-        "text": "B: The POL journey:",
+        "text": "Proving their identity - via Patient Online",
         "HTML": "
           <p>To prove their identity via the Patient Online (POL) journey, a user must use NHS login to enter:</p>
       <ul>
@@ -128,7 +130,8 @@
 <mark>
       {{ actionLink({
         'text': 'View the prototypes',
-        'href': 'http://nhslogin-demo.herokuapp.com/'
+        'href': 'http://nhslogin-demo.herokuapp.com/',
+        'openInNewWindow': 'true'
       }) }}</mark>
       "
       }) }}
@@ -146,7 +149,7 @@
         "classes": "nhsuk-expander",
         "text": "Account closure",
         "HTML": "
-       <p>NHS login has a process to automatically remove unused accounts. Currently, if your users wish to proactively remove their account, you can raise this to us via a support ticket.</p>
+       <p>NHS login has a process to automatically remove unused accounts. Currently, if your users wish to proactively remove their account, you can raise this to us via a <a href='' target='blank'>support ticket</a>.</p>
       <p>In line with our self-service ethos, we intend to revisit the potential for introducing enhanced capability as we progress through our scheduled Public Beta.</p>
       "
       }) }}
