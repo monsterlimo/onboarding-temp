@@ -71,6 +71,13 @@
       <p>We aim to make the NHS login Service account management capabilities self-service for the user wherever possible. The Service currently includes a feature that enables users to reset their NHS login password on a self-serve basis.</p>
       <p>Additionally, we intend to deliver the capability for users to change their email address and/or their 2FA mobile number online by our Public Beta.</p>
 
+      {{ pagination({
+        "previousUrl": "login",
+        "previousPage": "Log in using NHS login",
+        "nextUrl": "close",
+        "nextPage": "Close their account"
+      }) }}
+
     </div>
   </div>
 {% block pageScripts %}

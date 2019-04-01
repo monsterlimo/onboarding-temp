@@ -101,19 +101,17 @@
       </ul>
       <p>Once this information is submitted by the user, the details are checked against the GP system. As in the PYI journey, during this process the NHS number will also be matched to the user and stored in their NHS login account.</p>
 
-      <hr>
-
-      <h2>Here’s how a user logs in using NHS login:</h2>
-      <p>Once their NHS login account has been created, the next time the user navigates to a partner service’s login page, they will again be offered the option of signing into the system using NHS login.</p>
-      <p>The user can enter their ID and Password plus 2FA code. You can also implement fingerprint or Face ID if your service is an app.</p>
-      <p>The system then ensures the user has the appropriate level of verification for the service and logs them in.</p>
-      
-      <!--<p><a href="http://nhslogin-demo.herokuapp.com/">View the prototypes</a></p>-->
-
       {{ actionLink({
         "text": "View the prototypes",
         "href": "http://nhslogin-demo.herokuapp.com/",
         "openInNewWindow": "true"
+      }) }}
+
+      {{ pagination({
+        "previousUrl": "create",
+        "previousPage": "Create an NHS login",
+        "nextUrl": "login",
+        "nextPage": "Log in using NHS login"
       }) }}
 
     </div>

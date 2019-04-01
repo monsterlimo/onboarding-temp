@@ -34,8 +34,7 @@
     },
     {
       href: "prove",
-      text: "Prove their identity",
-      current: "true"
+      text: "Prove their identity"
     },
     {
       href: "login",
@@ -62,6 +61,11 @@
 
       <h2>Logging out</h2>
       <p>Our intention is for NHS login to support global log-off for those partners using the Single Sign On capability that we are in the process of developing. This functionality is intended to be delivered after we enter Public Beta.</p>
+
+      {{ pagination({
+        "previousUrl": "close",
+        "previousPage": "Close their account"
+      }) }}
 
     </div>
   </div>
