@@ -27,12 +27,28 @@
 
 {% block content %}
 
+<style>
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+</style>
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       <p>It allows users to access digital health and social care services as seamlessly as possible, whilst providing a safe way to make sure you’re giving only the right people access to your service.</p>
-      
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/aY9qGebzKww" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="videoWrapper">
+        <iframe  width="100%" src="https://www.youtube.com/embed/aY9qGebzKww" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
       <br /></br />
 
       {{ actionLink({
@@ -42,24 +58,35 @@
 
       <hr>
 
+      </div>
+      
+      <div class="nhsuk-grid-column-two-thirds">
+
       <h2>Why use NHS login?</h2>
       <p>If you’re building a health or social care app or website for patients, NHS login is a free, flexible solution which can take away the headache of creating an account for a user, verifying the users’ identity and linking it to an NHS number.</p>
-
-      {{ panel({
-        "label": "Benefits for your <strong>users</strong>",
-        "HTML": "<ul><li>One-time simple Sign-up process</li><li>Single login to access multiple Health and Social care services</li><li>Peace of mind that their data is secure</li></ul>"
-      }) }}
-
+      </div>
+    </div>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-one-half">
+        {{ panel({
+          "label": "Benefits for your <strong>users</strong>",
+          "HTML": "<ul><li>One-time simple Sign-up process</li><li>Single login to access multiple Health and Social care services</li><li>Peace of mind that their data is secure</li></ul>"
+        }) }}
+    </div>
+    <div class="nhsuk-grid-column-one-half">
       {{ panel({
         "label": "Benefits for your <strong>organisation</strong>",
         "HTML": "<ul><li>Being sure your users are who they say they are</li><li>Not having to build and manage an identity platform</li><li>A tailored level of user verification appropriate to your service</li></ul>"
       }) }}
-
+    </div>
+    
+    <div class="nhsuk-grid-column-two-thirds">
       {{ actionLink({
         "text": "Find out if NHS login is right for your service",
         "href": "overview"
       }) }}
-
+    </div>
+    <div class="nhsuk-grid-column-two-thirds">
       <hr>
 
       <h2>How it works</h2>
