@@ -28,7 +28,13 @@
       </h2>
       <p>NHS login is an internet facing system for identifying and verifying a user’s identity.</p>
       <p>It uses the <a target="blank" href="https://openid.net/developers/specs/">Open ID Connect</a> and the <a target="blank" href="https://oauth.net/2/">Oauth2.0 protocols</a>. It also uses <a target="blank" href="https://fidoalliance.org/specifications/">FIDO (Fast Identity Online) specifications</a>  which improves the user’s experience by allowing Fingerprint ID and Face ID seamlessly access native apps.</p>
-      <p>NHS login offers different levels of verification so you can choose the most appropriate for your service. To determine the right level of verification, review the guidance within the standards to understand the policy for the transactions within your service.</p>
+      <p>NHS login offers different levels of verification so you can choose the most appropriate for your service. To determine the right level of verification, <a href="how-it-works/authentication-verification">review the guidance within the standards</a> to understand the policy for the transactions within your service.</p>
+
+      {{ actionLink({
+        "text": "View the NHS login prototypes",
+        "href": "http://nhslogin-demo.herokuapp.com/",
+        "openInNewWindow": "true"
+      }) }}
 
       <h2>Example user journeys:</h2>
     <!--  <mark>add links</mark>
@@ -62,7 +68,7 @@
       <div class="nhsuk-expander-group">
       {{ details({
         "classes": "nhsuk-expander",
-        "text": "Here’s how a user creates an NHS login:",
+        "text": "Creating an NHS login:",
         "HTML": "
         <div class='videoWrapper'>
         <iframe width='560' height='315' src='https://www.youtube.com/embed/wI-jF9zJw0c' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>
