@@ -1,13 +1,15 @@
-# NHS.UK prototype kit
+# NHS login onboarding site
 
-The prototype kit is still in development and is not ready to use.
+Built upon the NHS.UK prototype kit, this site contains the prototype, prototype history and is able to output files for the live service
 
 ## Prerequisite
 
-Install the long-term support (LTS) version of <a href="https://nodejs.org/en/">Node.js</a>, which includes NPM.
+The docs folder has been rebuilt to host the version history of the site
 
 ## Running the application
 
-Clone the repo: `git clone https://github.com/nhsuk/nhsuk-prototype-kit nhsuk-prototype-kit` and whilst in the project directory `cd nhsuk-prototype-kit`, install the required npm packages with: `npm install`
-
 Run the project in development mode `npm run watch` and visit <a href="http://localhost:3000">http://localhost:3000</a>.
+
+## Building the live service
+
+To build the live service run the following command `npm public`. The public folder is cleared and rebuilt everytime the command is run. The AWS watches for changes in this folder so when any changes are pushed to the master branch the site will be redeployed.

@@ -7,8 +7,8 @@ const browserSync = require('browser-sync');
 const clean = require('gulp-clean');
 const sass = require('gulp-sass');
 const nodemon = require('gulp-nodemon');
-// const htmlmin = require('gulp-htmlmin');
-// const nunjucksRender = require('gulp-nunjucks-render');
+const htmlmin = require('gulp-htmlmin');
+const nunjucksRender = require('gulp-nunjucks-render');
 
 // Local dependencies
 const config = require('./app/config');
@@ -144,8 +144,9 @@ exports.compileScripts = compileScripts;
 exports.cleanPublic = cleanPublic;
 
 gulp.task('clean', gulp.series(cleanPublic));
-// gulp.task('HTML', gulp.series(copyComponents, compileHTML, cleanComponents));
-// gulp.task('Comps', gulp.series(cleanPublic, cleanComponents, copyComponents, compileHTML, compileScripts, compileImages, compileStyles, cleanComponents));
+//gulp.task('HTML', gulp.series(copyComponents, compileHTML));
+
+gulp.task('public', gulp.series(cleanComponents, copyComponents, cleanPublic, compileScripts, compileImages, compileStyles, compileHTML, cleanComponents));
 
 gulp.task('build', gulp.series(cleanPublic, compileStyles, compileScripts, compileImages));
 gulp.task('default', gulp.series(startNodemon, startBrowserSync, watch));

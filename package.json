@@ -8,6 +8,7 @@
     "prestart": "npm run build",
     "start": "node app.js",
     "test": "",
+    "public": "gulp public",
     "prewatch": "gulp build",
     "watch": "gulp"
   },
