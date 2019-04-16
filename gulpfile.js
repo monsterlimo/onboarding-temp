@@ -7,11 +7,11 @@ const browserSync = require('browser-sync');
 const clean = require('gulp-clean');
 const sass = require('gulp-sass');
 const nodemon = require('gulp-nodemon');
-const htmlmin = require('gulp-htmlmin');
-const nunjucksRender = require('gulp-nunjucks-render');
-const replace = require('gulp-string-replace');
-const notify = require('gulp-notify');
-const debug = require('gulp-debug');
+// const htmlmin = require('gulp-htmlmin');
+// const nunjucksRender = require('gulp-nunjucks-render');
+// const replace = require('gulp-string-replace');
+// const notify = require('gulp-notify');
+// const debug = require('gulp-debug');
 
 // Local dependencies
 const config = require('./app/config');
@@ -71,18 +71,18 @@ function copyComponents() {
 }
 
 // Compile HTML
-function compileHTML() {
-  return gulp.src('app/views/**/*.+(html|nunjucks)')
-    .pipe(nunjucksRender({
-      path: ['app/views', 'app/components']
-    }))
-    .pipe(htmlmin(
-      {
-        collapseWhitespace: true,
-        removeComments: true
-      }))
-    .pipe(gulp.dest('public'))
-}
+//function compileHTML() {
+//  return gulp.src('app/views/**/*.+(html|nunjucks)')
+ //   .pipe(nunjucksRender({
+ //     path: ['app/views', 'app/components']
+ //   }))
+ //   .pipe(htmlmin(
+ //     {
+ //       collapseWhitespace: true,
+ //       removeComments: true
+ //     }))
+ //   .pipe(gulp.dest('public'))
+//}
 
 // Replace URLS
 // This is not pretty, in fact it's quite horrific
@@ -94,23 +94,24 @@ function compileHTML() {
 // static files
 // I could improve this by taking the current src and using that to
 // check what is referencing it
-function replaceURLS() {
-  return gulp.src('public/**/*.+(html)')
-    .pipe(notify({ message: 'starting' }))
-    .pipe(replace('what-is-nhs-login', 'what-is-nhs-login.html'))
-    .pipe(replace('why-use-nhs-login', 'why-use-nhs-login.html'))
-    .pipe(replace('index', 'index.html'))
-    .pipe(replace('how-it-works', 'how-it-works.html'))
-    .pipe(replace('features', 'features.html'))
-    .pipe(replace('authentication-verification', 'authentication-verification.html'))
-    .pipe(replace('safety-and-security', 'safety-and-security.html'))
-    .pipe(replace('get-started', 'get-started.html'))
-    .pipe(replace('onboarding-summary', 'onboarding-summary.html'))
-    .pipe(replace('request-onboarding', 'request-onboarding.html'))
-    //.pipe(debug())
-    .pipe(notify({ message: 'found one' }))
-    .pipe(gulp.dest('public'));
-}
+
+// function replaceURLS() {
+//  return gulp.src('public/**/*.+(html)')
+//    .pipe(notify({ message: 'starting' }))
+//    .pipe(replace('what-is-nhs-login', 'what-is-nhs-login.html'))
+//    .pipe(replace('why-use-nhs-login', 'why-use-nhs-login.html'))
+//    .pipe(replace('index', 'index.html'))
+//    .pipe(replace('how-it-works', 'how-it-works.html'))
+//    .pipe(replace('features', 'features.html'))
+//    .pipe(replace('authentication-verification', 'authentication-verification.html'))
+//    .pipe(replace('safety-and-security', 'safety-and-security.html'))
+//    .pipe(replace('get-started', 'get-started.html'))
+//    .pipe(replace('onboarding-summary', 'onboarding-summary.html'))
+//    .pipe(replace('request-onboarding', 'request-onboarding.html'))
+//    .pipe(notify({ message: 'found one' }))
+//    .pipe(gulp.dest('public'));
+// }
+
 
 // Start nodemon
 function startNodemon(done) {
@@ -176,7 +177,6 @@ exports.cleanPublic = cleanPublic;
 
 gulp.task('clean', gulp.series(cleanPublic));
 //gulp.task('HTML', gulp.series(copyComponents, compileHTML));
-
 // gulp.task('public', gulp.series(cleanComponents, copyComponents, cleanPublic, compileScripts, compileImages, compileStyles, compileHTML, cleanComponents));
 // gulp.task('replace', gulp.series(replaceURLS));
 gulp.task('build', gulp.series(cleanPublic, compileStyles, compileScripts, compileImages));
