@@ -177,7 +177,7 @@ exports.cleanPublic = cleanPublic;
 gulp.task('clean', gulp.series(cleanPublic));
 //gulp.task('HTML', gulp.series(copyComponents, compileHTML));
 
-gulp.task('public', gulp.series(cleanComponents, copyComponents, cleanPublic, compileScripts, compileImages, compileStyles, compileHTML, cleanComponents));
-gulp.task('replace', gulp.series(replaceURLS));
+// gulp.task('public', gulp.series(cleanComponents, copyComponents, cleanPublic, compileScripts, compileImages, compileStyles, compileHTML, cleanComponents));
+// gulp.task('replace', gulp.series(replaceURLS));
 gulp.task('build', gulp.series(cleanPublic, compileStyles, compileScripts, compileImages));
 gulp.task('default', gulp.series(startNodemon, startBrowserSync, watch));
